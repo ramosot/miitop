@@ -799,8 +799,8 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 //
 
 Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
-	'Class:WinServer' => 'Windows',
-	'Class:WinServer+' => 'Windows',
+	'Class:WinServer' => 'Servidor Windows',
+	'Class:WinServer+' => 'Servidor Windows',
 	'Class:WinServer/Attribute:managementip' => 'Dirección IP',
 	'Class:WinServer/Attribute:managementip+' => 'Dirección IP',	
 	
@@ -810,24 +810,24 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 //
 
 Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
-	'Class:LinuxServer' => 'Linux',
-	'Class:LinuxServer+' => 'Linux',
+	'Class:LinuxServer' => 'Servidor Linux',
+	'Class:LinuxServer+' => 'Servidor Linux',
 	'Class:LinuxServer/Attribute:managementip' => 'Dirección IP',
 	'Class:LinuxServer/Attribute:managementip+' => 'Dirección IP',
-	'Class:LinuxServer/Attribute:host_id' => 'Host ID',
-	'Class:LinuxServer/Attribute:host_id+' => 'Host ID',
+	'Class:LinuxServer/Attribute:hostid' => 'Host ID',
+	'Class:LinuxServer/Attribute:hostid+' => 'Host ID',
 ));
 
 // Class: UnixServer
 //
 
 Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
-	'Class:UnixServer' => 'Unix',
-	'Class:UnixServer+' => 'Unix',
+	'Class:UnixServer' => 'Servidor Unix',
+	'Class:UnixServer+' => 'Servidor Unix',
 	'Class:UnixServer/Attribute:managementip' => 'Dirección IP',
 	'Class:UnixServer/Attribute:managementip+' => 'Dirección IP',
-	'Class:UnixServer/Attribute:host_id' => 'Host ID',
-	'Class:UnixServer/Attribute:host_id+' => 'Host ID',
+	'Class:UnixServer/Attribute:hostid' => 'Host ID',
+	'Class:UnixServer/Attribute:hostid+' => 'Host ID',
 
 ));
 
