@@ -3,7 +3,7 @@
   <constants>
   </constants>
   <classes>
-    <class id="Switch" _delta="define">
+    <class id="Switche" _delta="define">
       <parent>NetworkDevice</parent>
       <properties>
         <category>bizmodel,searchable</category>
@@ -37,6 +37,7 @@
           <is_null_allowed>false</is_null_allowed>
           <display_style>list</display_style>
         </field>
+       </fields>
       <presentation>
         <details>
           <items>
@@ -311,6 +312,7 @@
           <is_null_allowed>false</is_null_allowed>
           <display_style>list</display_style>
         </field>
+       </fields>
       <presentation>
         <details>
           <items>
@@ -585,6 +587,7 @@
           <is_null_allowed>false</is_null_allowed>
           <display_style>list</display_style>
         </field>
+       </fields>
       <presentation>
         <details>
           <items>
@@ -650,7 +653,7 @@
                     <item id="networkdevicetype_id">
                       <rank>10</rank>
                     </item>
-                    <item id="router_type">
+                    <item id="apoint_type">
                       <rank>15</rank>
                     </item>
                     <item id="brand_id">
@@ -787,7 +790,7 @@
             <item id="location_id">
               <rank>40</rank>
             </item>
-            <item id="router_type">
+            <item id="apoint_type">
                <rank>10</rank>
             </item>
             <item id="brand_id">
