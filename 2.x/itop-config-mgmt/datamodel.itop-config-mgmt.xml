@@ -2645,6 +2645,7 @@
             <attribute id="name"/>
             <attribute id="org_id"/>
             <attribute id="organization_name"/>
+			<attribute id="finalclass"/>
           </attributes>
         </reconciliation>
       </properties>
@@ -2728,10 +2729,10 @@
                     <item id="location_id">
                       <rank>50</rank>
                     </item>
-					<item id="floor_id">
+					          <item id="floor_id">
                       <rank>50</rank>
                     </item>
-			        <item id="room_id">
+			              <item id="room_id">
                       <rank>50</rank>
                     </item>
                     <item id="rack_id">
@@ -2791,7 +2792,7 @@
                     <item id="end_of_warranty">
                       <rank>30</rank>
                     </item>
-					<item id="end_of_life">
+					          <item id="end_of_life">
                       <rank>40</rank>
                     </item>
                   </items>
@@ -2869,6 +2870,9 @@
             <item id="end_of_warranty">
               <rank>140</rank>
             </item>
+            <item id="finalclass">
+              <rank>15</rank>
+            </item>
           </items>
         </search>
         <list>
@@ -2893,6 +2897,9 @@
             </item>
             <item id="serialnumber">
               <rank>70</rank>
+            </item>
+            <item id="finalclass">
+              <rank>15</rank>
             </item>
           </items>
         </list>
@@ -2920,7 +2927,7 @@
         </relation>
       </relations>
     </class>
-        <class id="Server" _delta="define">
+         <class id="Server" _delta="define">
       <parent>DatacenterDevice</parent>
       <properties>
         <category>bizmodel,searchable</category>
@@ -3169,7 +3176,7 @@
                     <item id="name">
                       <rank>10</rank>
                     </item>
-					<item id="hostid">
+					          <item id="hostid">
                       <rank>15</rank>
                     </item>
                     <item id="org_id">
@@ -3237,7 +3244,7 @@
                     <item id="enclosure_id">
                       <rank>100</rank>
                     </item>
-					<item id="managementip">
+					          <item id="managementip">
                       <rank>45</rank>
                     </item>
                   </items>
@@ -3256,10 +3263,10 @@
                     <item id="osversion_id">
                       <rank>20</rank>
                     </item>
-					<item id="ospatch_id">
+					          <item id="ospatch_id">
                       <rank>30</rank>
                     </item>
-					<item id="oslicence_id">
+					          <item id="oslicence_id">
                       <rank>40</rank>
                     </item>
                   </items>
@@ -3321,7 +3328,7 @@
                     </item>
                   </items>
                 </item>
-			  </items>
+			       </items>
             </item>
           </items>
         </details>
