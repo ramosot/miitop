@@ -1096,7 +1096,7 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:OraDB/Attribute:path' => 'Oracle Home',
 	'Class:OraDB/Attribute:path+' => 'Oracle Home',
 	'Class:OraDB/Attribute:ip_listener' => 'IP del Listener',
-	'Class:OraDB/Attribute:ip_listener+' => 'IP de Listener',
+	'Class:OraDB/Attribute:ip_listener+' => 'IP del Listener',
 	
 ));
 

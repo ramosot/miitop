@@ -2645,7 +2645,6 @@
             <attribute id="name"/>
             <attribute id="org_id"/>
             <attribute id="organization_name"/>
-			<attribute id="finalclass"/>
           </attributes>
         </reconciliation>
       </properties>
@@ -2653,7 +2652,7 @@
         <field id="networkdevicetype_id" xsi:type="AttributeExternalKey">
           <sql>networkdevicetype_id</sql>
           <target_class>NetworkDeviceType</target_class>
-          <is_null_allowed>false</is_null_allowed>
+          <is_null_allowed>true</is_null_allowed>
           <on_target_delete>DEL_MANUAL</on_target_delete>
         </field>
         <field id="networkdevicetype_name" xsi:type="AttributeExternalField">
@@ -2729,10 +2728,10 @@
                     <item id="location_id">
                       <rank>50</rank>
                     </item>
-					          <item id="floor_id">
+          <item id="floor_id">
                       <rank>50</rank>
                     </item>
-			              <item id="room_id">
+              <item id="room_id">
                       <rank>50</rank>
                     </item>
                     <item id="rack_id">
@@ -2792,7 +2791,7 @@
                     <item id="end_of_warranty">
                       <rank>30</rank>
                     </item>
-					          <item id="end_of_life">
+          <item id="end_of_life">
                       <rank>40</rank>
                     </item>
                   </items>
@@ -2870,9 +2869,6 @@
             <item id="end_of_warranty">
               <rank>140</rank>
             </item>
-            <item id="finalclass">
-              <rank>15</rank>
-            </item>
           </items>
         </search>
         <list>
@@ -2884,21 +2880,24 @@
               <rank>20</rank>
             </item>
             <item id="business_criticity">
-              <rank>30</rank>
+              <rank>90</rank>
             </item>
             <item id="location_id">
               <rank>40</rank>
             </item>
-            <item id="brand_id">
+            <item id="floor_id">
               <rank>50</rank>
             </item>
-            <item id="model_id">
+            <item id="room_id">
               <rank>60</rank>
             </item>
-            <item id="serialnumber">
+            <item id="brand_id">
               <rank>70</rank>
             </item>
-            <item id="finalclass">
+            <item id="model_id">
+              <rank>80</rank>
+            </item>
+             <item id="finalclass">
               <rank>15</rank>
             </item>
           </items>
@@ -2907,13 +2906,13 @@
       <methods>
         <method id="GetRelationQueries">
           <comment>/**
-	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
-	 * in case an extension attempts to redefine this function...	 
-	 */</comment>
+   * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+   * in case an extension attempts to redefine this function...  
+   */</comment>
           <static>true</static>
           <access>public</access>
           <type>Overload-DBObject</type>
-          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+          <code><![CDATA[ public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
         </method>
       </methods>
       <relations>
