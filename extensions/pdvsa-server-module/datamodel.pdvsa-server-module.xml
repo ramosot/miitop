@@ -241,6 +241,9 @@
             <item id="business_criticity">
               <rank>40</rank>
             </item>
+             <item id="managementip">
+              <rank>45</rank>
+            </item>
             <item id="location_id">
               <rank>50</rank>
             </item>
@@ -577,6 +580,9 @@
             <item id="business_criticity">
               <rank>40</rank>
             </item>
+            <item id="managementip">
+              <rank>45</rank>
+            </item>
             <item id="location_id">
               <rank>50</rank>
             </item>
@@ -638,7 +644,7 @@
             <item id="room_id">
               <rank>60</rank>
             </item>
-			<item id="managementip">
+			      <item id="managementip">
               <rank>65</rank>
             </item>
             <item id="brand_id">
@@ -912,6 +918,9 @@
             </item>
             <item id="business_criticity">
               <rank>40</rank>
+            </item>
+            <item id="managementip">
+              <rank>45</rank>
             </item>
             <item id="location_id">
               <rank>50</rank>

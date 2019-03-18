@@ -100,11 +100,8 @@
                 <item id="fieldset:Server:moreinfo">
                   <rank>20</rank>
                   <items>
-                    <item id="networkdevicetype_id">
-                      <rank>10</rank>
-                    </item>
                     <item id="switch_type">
-                      <rank>15</rank>
+                      <rank>10</rank>
                     </item>
                     <item id="brand_id">
                       <rank>20</rank>
@@ -231,9 +228,6 @@
         </search>
         <list>
           <items>
-            <item id="org_id">
-              <rank>10</rank>
-            </item>
             <item id="status">
               <rank>20</rank>
             </item>
@@ -254,6 +248,9 @@
             </item>
             <item id="serialnumber">
               <rank>70</rank>
+            </item>
+            <item id="finalclass">
+              <rank>10</rank>
             </item>
           </items>
         </list>
@@ -378,11 +375,8 @@
                 <item id="fieldset:Server:moreinfo">
                   <rank>20</rank>
                   <items>
-                    <item id="networkdevicetype_id">
-                      <rank>10</rank>
-                    </item>
                     <item id="router_type">
-                      <rank>15</rank>
+                      <rank>10</rank>
                     </item>
                     <item id="brand_id">
                       <rank>20</rank>
@@ -509,9 +503,6 @@
         </search>
         <list>
           <items>
-            <item id="org_id">
-              <rank>10</rank>
-            </item>
             <item id="status">
               <rank>20</rank>
             </item>
@@ -532,6 +523,9 @@
             </item>
             <item id="serialnumber">
               <rank>70</rank>
+            </item>
+            <item id="finalclass">
+              <rank>15</rank>
             </item>
           </items>
         </list>
@@ -656,11 +650,8 @@
                 <item id="fieldset:Server:moreinfo">
                   <rank>20</rank>
                   <items>
-                    <item id="networkdevicetype_id">
-                      <rank>10</rank>
-                    </item>
                     <item id="apoint_type">
-                      <rank>15</rank>
+                      <rank>10</rank>
                     </item>
                     <item id="brand_id">
                       <rank>20</rank>
@@ -787,9 +778,6 @@
         </search>
         <list>
           <items>
-            <item id="org_id">
-              <rank>10</rank>
-            </item>
             <item id="status">
               <rank>20</rank>
             </item>
@@ -810,6 +798,9 @@
             </item>
             <item id="serialnumber">
               <rank>70</rank>
+            </item>
+            <item id="finalclass">
+              <rank>10</rank>
             </item>
           </items>
         </list>
