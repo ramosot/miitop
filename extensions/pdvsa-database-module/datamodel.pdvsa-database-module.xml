@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5">
+   <classes>
+    <class id="OraDB" _delta="define">
+      <parent>DBServer</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>ordb</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/oradb.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+            <attribute id="system_id"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+         <field id="ip_listener" xsi:type="AttributeIPAddress">
+          <sql>ip_service</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>		
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="status">
+              <rank>30</rank>
+            </item>
+			<item id="envdb">
+              <rank>40</rank>
+            </item>
+			<item id="port_con">
+              <rank>50</rank>
+            </item>
+			<item id="ip_service">
+              <rank>60</rank>
+            </item>
+			<item id="ip_listener">
+              <rank>70</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>80</rank>
+            </item>
+            <item id="system_id">
+              <rank>90</rank>
+            </item>
+            <item id="software_id">
+              <rank>100</rank>
+            </item>
+            <item id="softwarelicence_id">
+              <rank>110</rank>
+            </item>
+            <item id="path">
+              <rank>120</rank>
+            </item>
+            <item id="move2production">
+              <rank>130</rank>
+            </item>
+            <item id="description">
+              <rank>140</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>150</rank>
+            </item>
+            <item id="documents_list">
+              <rank>160</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>160</rank>
+            </item>
+            <item id="dbschema_list">
+              <rank>170</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>180</rank>
+            </item>
+            <item id="services_list">
+              <rank>190</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+			<item id="envdb">
+              <rank>30</rank>
+            </item>
+			<item id="port_con">
+              <rank>40</rank>
+            </item>			
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="system_id">
+              <rank>30</rank>
+            </item>
+            <item id="software_id">
+              <rank>40</rank>
+            </item>
+			<item id="envdb">
+              <rank>50</rank>
+            </item>
+			<item id="port_con">
+              <rank>60</rank>
+            </item>
+			<item id="ip_service">
+              <rank>70</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+        <method id="GetRelationQueries">
+          <comment>/**
+	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+	 * in case an extension attempts to redefine this function...	 
+	 */</comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
+      </methods>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="databaseschema">
+              <attribute>dbschema_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
+    </class>
+	<class id="PGDB" _delta="define">
+      <parent>DBServer</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>pgdb</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/pgdb.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+            <attribute id="system_id"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+         <field id="root_base" xsi:type="AttributeString">
+          <sql>root_base</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>		
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="status">
+              <rank>30</rank>
+            </item>
+			<item id="envdb">
+              <rank>40</rank>
+            </item>
+			<item id="port_con">
+              <rank>50</rank>
+            </item>
+			<item id="ip_service">
+              <rank>60</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>80</rank>
+            </item>
+            <item id="system_id">
+              <rank>90</rank>
+            </item>
+            <item id="software_id">
+              <rank>100</rank>
+            </item>
+            <item id="softwarelicence_id">
+              <rank>110</rank>
+            </item>
+            <item id="path">
+              <rank>120</rank>
+            </item>
+			<item id="root_base">
+              <rank>125</rank>
+            </item>
+            <item id="move2production">
+              <rank>130</rank>
+            </item>
+            <item id="description">
+              <rank>140</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>150</rank>
+            </item>
+            <item id="documents_list">
+              <rank>160</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>160</rank>
+            </item>
+            <item id="dbschema_list">
+              <rank>170</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>180</rank>
+            </item>
+            <item id="services_list">
+              <rank>190</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+			<item id="envdb">
+              <rank>30</rank>
+            </item>
+			<item id="port_con">
+              <rank>40</rank>
+            </item>			
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="system_id">
+              <rank>30</rank>
+            </item>
+            <item id="software_id">
+              <rank>40</rank>
+            </item>
+			<item id="envdb">
+              <rank>50</rank>
+            </item>
+			<item id="port_con">
+              <rank>60</rank>
+            </item>
+			<item id="ip_service">
+              <rank>70</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+        <method id="GetRelationQueries">
+          <comment>/**
+	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+	 * in case an extension attempts to redefine this function...	 
+	 */</comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
+      </methods>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="databaseschema">
+              <attribute>dbschema_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
+    </class>
+	<class id="MySQLDB" _delta="define">
+      <parent>DBServer</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>mysqldb</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/mysqldb.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+            <attribute id="system_id"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+         <field id="root_base" xsi:type="AttributeString">
+          <sql>root_base</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>		
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="status">
+              <rank>30</rank>
+            </item>
+			<item id="envdb">
+              <rank>40</rank>
+            </item>
+			<item id="port_con">
+              <rank>50</rank>
+            </item>
+			<item id="ip_service">
+              <rank>60</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>80</rank>
+            </item>
+            <item id="system_id">
+              <rank>90</rank>
+            </item>
+            <item id="software_id">
+              <rank>100</rank>
+            </item>
+            <item id="softwarelicence_id">
+              <rank>110</rank>
+            </item>
+            <item id="path">
+              <rank>120</rank>
+            </item>
+			<item id="root_base">
+              <rank>125</rank>
+            </item>
+            <item id="move2production">
+              <rank>130</rank>
+            </item>
+            <item id="description">
+              <rank>140</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>150</rank>
+            </item>
+            <item id="documents_list">
+              <rank>160</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>160</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>180</rank>
+            </item>
+            <item id="services_list">
+              <rank>190</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+			<item id="envdb">
+              <rank>30</rank>
+            </item>
+			<item id="port_con">
+              <rank>40</rank>
+            </item>			
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="system_id">
+              <rank>30</rank>
+            </item>
+            <item id="software_id">
+              <rank>40</rank>
+            </item>
+			<item id="envdb">
+              <rank>50</rank>
+            </item>
+			<item id="port_con">
+              <rank>60</rank>
+            </item>
+			<item id="ip_service">
+              <rank>70</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+        <method id="GetRelationQueries">
+          <comment>/**
+	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+	 * in case an extension attempts to redefine this function...	 
+	 */</comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
+      </methods>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="applicationsolution">
+              <attribute>applicationsolution_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
+    </class>
+	<class id="MariaDB" _delta="define">
+      <parent>DBServer</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>mariadb</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/mariadb.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+            <attribute id="system_id"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+         <field id="root_base" xsi:type="AttributeString">
+          <sql>root_base</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>		
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="status">
+              <rank>30</rank>
+            </item>
+			<item id="envdb">
+              <rank>40</rank>
+            </item>
+			<item id="port_con">
+              <rank>50</rank>
+            </item>
+			<item id="ip_service">
+              <rank>60</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>80</rank>
+            </item>
+            <item id="system_id">
+              <rank>90</rank>
+            </item>
+            <item id="software_id">
+              <rank>100</rank>
+            </item>
+            <item id="softwarelicence_id">
+              <rank>110</rank>
+            </item>
+            <item id="path">
+              <rank>120</rank>
+            </item>
+			<item id="root_base">
+              <rank>125</rank>
+            </item>
+            <item id="move2production">
+              <rank>130</rank>
+            </item>
+            <item id="description">
+              <rank>140</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>150</rank>
+            </item>
+            <item id="documents_list">
+              <rank>160</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>160</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>180</rank>
+            </item>
+            <item id="services_list">
+              <rank>190</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+			<item id="envdb">
+              <rank>30</rank>
+            </item>
+			<item id="port_con">
+              <rank>40</rank>
+            </item>			
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="system_id">
+              <rank>30</rank>
+            </item>
+            <item id="software_id">
+              <rank>40</rank>
+            </item>
+			<item id="envdb">
+              <rank>50</rank>
+            </item>
+			<item id="port_con">
+              <rank>60</rank>
+            </item>
+			<item id="ip_service">
+              <rank>70</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+        <method id="GetRelationQueries">
+          <comment>/**
+	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+	 * in case an extension attempts to redefine this function...	 
+	 */</comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
+      </methods>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="applicationsolution">
+              <attribute>applicationsolution_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
+    </class>
+	<class id="SQLSDB" _delta="define">
+      <parent>DBServer</parent>
+      <properties>
+        <category>bizmodel,searchable</category>
+        <abstract>false</abstract>
+        <key_type>autoincrement</key_type>
+        <db_table>sqlsdb</db_table>
+        <db_key_field>id</db_key_field>
+        <db_final_class_field/>
+        <naming>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </naming>
+        <display_template/>
+        <icon>images/sqlsdb.png</icon>
+        <reconciliation>
+          <attributes>
+            <attribute id="name"/>
+            <attribute id="org_id"/>
+            <attribute id="organization_name"/>
+            <attribute id="system_id"/>
+            <attribute id="system_name"/>
+          </attributes>
+        </reconciliation>
+      </properties>
+      <fields>
+         <field id="root_base" xsi:type="AttributeString">
+          <sql>root_base</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+        </field>		
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+            <item id="status">
+              <rank>30</rank>
+            </item>
+			<item id="envdb">
+              <rank>40</rank>
+            </item>
+			<item id="ip_service">
+              <rank>60</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>80</rank>
+            </item>
+            <item id="system_id">
+              <rank>90</rank>
+            </item>
+            <item id="software_id">
+              <rank>100</rank>
+            </item>
+            <item id="softwarelicence_id">
+              <rank>110</rank>
+            </item>
+            <item id="path">
+              <rank>120</rank>
+            </item>
+			<item id="root_base">
+              <rank>125</rank>
+            </item>
+            <item id="move2production">
+              <rank>130</rank>
+            </item>
+            <item id="description">
+              <rank>140</rank>
+            </item>
+            <item id="contacts_list">
+              <rank>150</rank>
+            </item>
+            <item id="documents_list">
+              <rank>160</rank>
+            </item>
+            <item id="applicationsolution_list">
+              <rank>160</rank>
+            </item>
+            <item id="providercontracts_list">
+              <rank>180</rank>
+            </item>
+            <item id="services_list">
+              <rank>190</rank>
+            </item>
+          </items>
+        </details>
+        <search>
+          <items>
+            <item id="name">
+              <rank>10</rank>
+            </item>
+            <item id="org_id">
+              <rank>20</rank>
+            </item>
+			<item id="envdb">
+              <rank>30</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>50</rank>
+            </item>
+            <item id="move2production">
+              <rank>60</rank>
+            </item>
+          </items>
+        </search>
+        <list>
+          <items>
+            <item id="org_id">
+              <rank>10</rank>
+            </item>
+            <item id="business_criticity">
+              <rank>20</rank>
+            </item>
+            <item id="system_id">
+              <rank>30</rank>
+            </item>
+            <item id="software_id">
+              <rank>40</rank>
+            </item>
+			<item id="envdb">
+              <rank>50</rank>
+            </item>
+			<item id="ip_service">
+              <rank>70</rank>
+            </item>
+          </items>
+        </list>
+      </presentation>
+      <methods>
+        <method id="GetRelationQueries">
+          <comment>/**
+	 * Placeholder for backward compatibility (iTop &lt;= 2.1.0)
+	 * in case an extension attempts to redefine this function...	 
+	 */</comment>
+          <static>true</static>
+          <access>public</access>
+          <type>Overload-DBObject</type>
+          <code><![CDATA[	public static function GetRelationQueries($sRelCode){return parent::GetRelationQueries($sRelCode);} ]]></code>
+        </method>
+      </methods>
+      <relations>
+        <relation id="impacts">
+          <neighbours>
+            <neighbour id="applicationsolution">
+              <attribute>applicationsolution_list</attribute>
+            </neighbour>
+          </neighbours>
+        </relation>
+      </relations>
+    </class>
+  </classes>
+  <menus>
+  </menus>
+  <user_rights>
+    <groups>
+    </groups>
+    <profiles>
+    </profiles>
+  </user_rights>
+</itop_design>
