@@ -2710,7 +2710,7 @@
             <item id="col:col1">
               <rank>80</rank>
               <items>
-                <item id="fieldset:Server:baseinfo">
+                <item id="fieldset:NetworkDevice:baseinfo">
                   <rank>10</rank>
                   <items>
                     <item id="name">
@@ -2742,7 +2742,7 @@
                     </item>
                   </items>
                 </item>
-                <item id="fieldset:Server:moreinfo">
+                <item id="fieldset:NetworkDevice:moreinfo">
                   <rank>20</rank>
                   <items>
                     <item id="networkdevicetype_id">
@@ -2779,7 +2779,7 @@
             <item id="col:col2">
               <rank>90</rank>
               <items>
-                <item id="fieldset:Server:Date">
+                <item id="fieldset:NetworkDevice:Date">
                   <rank>10</rank>
                   <items>
                     <item id="move2production">
@@ -2796,7 +2796,7 @@
                     </item>
                   </items>
                 </item>
-                <item id="fieldset:Server:power">
+                <item id="fieldset:NetworkDevice:power">
                   <rank>20</rank>
                   <items>
                     <item id="powerA_id">
@@ -2873,9 +2873,6 @@
         </search>
         <list>
           <items>
-            <item id="org_id">
-              <rank>10</rank>
-            </item>
             <item id="status">
               <rank>20</rank>
             </item>
@@ -2898,6 +2895,9 @@
               <rank>80</rank>
             </item>
              <item id="finalclass">
+              <rank>10</rank>
+            </item>
+            <item id="managementip">
               <rank>15</rank>
             </item>
           </items>
@@ -6368,6 +6368,10 @@
         <field id="type" xsi:type="AttributeEnum">
           <values>
             <value id="NetworkDevice">NetworkDevice</value>
+            <value id="Switche">Switche</value>
+            <value id="Router">Router</value>
+            <value id="AccessPoint">AccessPoint</value>
+            <value id="WLANController">WLANController</value>
             <value id="Server">Server</value>
             <value id="SANSwitch">SANSwitch</value>
             <value id="StorageSystem">StorageSystem</value>
