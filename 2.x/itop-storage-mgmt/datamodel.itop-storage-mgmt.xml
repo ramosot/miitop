@@ -1816,29 +1816,24 @@
           <cell id="0" _delta="must_exist">
             <rank>0</rank>
             <dashlets>
-              <dashlet id="33" xsi:type="DashletBadge" _delta="define">
-                <rank>5</rank>
+              <dashlet id="2" xsi:type="DashletBadge" _delta="define">
+                <rank>2</rank>
                 <class>StorageSystem</class>
               </dashlet>
-              <dashlet id="34" xsi:type="DashletBadge" _delta="define">
-                <rank>6</rank>
+              <dashlet id="3" xsi:type="DashletBadge" _delta="define">
+                <rank>3</rank>
                 <class>SANSwitch</class>
               </dashlet>
-              <dashlet id="35" xsi:type="DashletBadge" _delta="define">
-                <rank>7</rank>
+              <dashlet id="4" xsi:type="DashletBadge" _delta="define">
+                <rank>4</rank>
                 <class>NAS</class>
               </dashlet>
-              <dashlet id="36" xsi:type="DashletBadge" _delta="define">
-                <rank>8</rank>
+              <dashlet id="5" xsi:type="DashletBadge" _delta="define">
+                <rank>5</rank>
                 <class>TapeLibrary</class>
               </dashlet>
-            </dashlets>
-          </cell>
-          <cell id="4" _delta="must_exist">
-            <rank>4</rank>
-            <dashlets>
-              <dashlet id="37" xsi:type="DashletBadge" _delta="define">
-                <rank>3</rank>
+              <dashlet id="6" xsi:type="DashletBadge" _delta="define">
+                <rank>6</rank>
                 <class>LogicalVolume</class>
               </dashlet>
             </dashlets>

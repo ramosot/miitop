@@ -929,37 +929,37 @@
           <cell id="1" _delta="define">
             <rank>1</rank>
             <dashlets>
-              <dashlet id="38" xsi:type="DashletHeaderStatic">
-                <rank>0</rank>
+              <dashlet id="10" xsi:type="DashletHeaderStatic">
+                <rank>11</rank>
                 <title>Menu:ConfigManagement:virtualization</title>
                 <icon>itop-virtualization-mgmt/images/hypervisor-sw.png</icon>
               </dashlet>
-              <dashlet id="39" xsi:type="DashletBadge">
-                <rank>1</rank>
+              <dashlet id="12" xsi:type="DashletBadge">
+                <rank>12</rank>
                 <class>Farm</class>
               </dashlet>
-              <dashlet id="40" xsi:type="DashletBadge">
-                <rank>2</rank>
+              <dashlet id="13" xsi:type="DashletBadge">
+                <rank>13</rank>
                 <class>Hypervisor</class>
               </dashlet>
-              <dashlet id="41" xsi:type="DashletBadge">
-                <rank>3</rank>
+              <dashlet id="14" xsi:type="DashletBadge">
+                <rank>14</rank>
                 <class>VirtualMachine</class>
               </dashlet>
-              <dashlet id="42" xsi:type="DashletBadge">
-                <rank>4</rank>
+              <dashlet id="15" xsi:type="DashletBadge">
+                <rank>15</rank>
                 <class>Server</class>
               </dashlet>
-              <dashlet id="43" xsi:type="DashletBadge">
-                <rank>5</rank>
+              <dashlet id="16" xsi:type="DashletBadge">
+                <rank>16</rank>
                 <class>LinuxServer</class>
               </dashlet>
-              <dashlet id="44" xsi:type="DashletBadge">
-                <rank>6</rank>
+              <dashlet id="17" xsi:type="DashletBadge">
+                <rank>17</rank>
                 <class>UnixServer</class>
               </dashlet>
-              <dashlet id="45" xsi:type="DashletBadge">
-                <rank>7</rank>
+              <dashlet id="18" xsi:type="DashletBadge">
+                <rank>18</rank>
                 <class>WinServer</class>
               </dashlet>
             </dashlets>

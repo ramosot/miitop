@@ -2682,6 +2682,15 @@
           <default_value/>
           <is_null_allowed>true</is_null_allowed>
         </field>
+        <field id="respaldado" xsi:type="AttributeEnum">
+          <values>
+            <value id="yes">yes</value>
+            <value id="not">not</value>
+          </values>
+          <sql>status</sql>          
+          <is_null_allowed>true</is_null_allowed>
+          <display_style>radio_horizontal</display_style>
+        </field>
       </fields>
       <presentation>
         <details>
@@ -3508,6 +3517,17 @@
           <min_up_mode>user</min_up_mode>
           <min_up_type>count</min_up_type>
         </field>
+         <field id="coverage" xsi:type="AttributeEnum">
+          <values>
+            <value id="Local">Local</value>
+            <value id="Regional">Regional</value>
+            <value id="National">National</value>
+          </values>
+          <sql>coverage</sql>
+          <default_value/>
+          <is_null_allowed>true</is_null_allowed>
+          <display_style>list</display_style>
+        </field>
       </fields>
       <presentation>
         <details>
@@ -3520,6 +3540,9 @@
             </item>
             <item id="status">
               <rank>30</rank>
+            </item>
+            <item id="coverage">
+              <rank>35</rank>
             </item>
             <item id="business_criticity">
               <rank>40</rank>
@@ -3564,12 +3587,18 @@
             <item id="move2production">
               <rank>40</rank>
             </item>
+            <item id="coverage">
+              <rank>50</rank>
+            </item>
           </items>
         </search>
         <list>
           <items>
             <item id="org_id">
               <rank>10</rank>
+            </item>
+            <item id="coverage">
+              <rank>15</rank>
             </item>
             <item id="business_criticity">
               <rank>20</rank>
@@ -4948,6 +4977,14 @@
           <is_null_allowed>true</is_null_allowed>
           <target>_blank</target>
         </field>
+        <field id="software_list" xsi:type="AttributeLinkedSetIndirect">
+          <linked_class>lnkSoftwareToWebApplication</linked_class>
+          <ext_key_to_me>webapplication_id</ext_key_to_me>
+          <count_min>0</count_min>
+          <count_max>0</count_max>
+          <ext_key_to_remote>software_id</ext_key_to_remote>
+          <duplicates/>
+        </field>
       </fields>
       <presentation>
         <details>
@@ -4986,6 +5023,9 @@
               <rank>120</rank>
             </item>
             <item id="services_list">
+              <rank>130</rank>
+            </item>
+            <item id="software_list">
               <rank>130</rank>
             </item>
           </items>
@@ -5102,6 +5142,9 @@
             <value id="PCSoftware">PCSoftware</value>
             <value id="OtherSoftware">OtherSoftware</value>
             <value id="WebServer">WebServer</value>
+            <value id="EPSoftware">EPSoftware</value>
+            <value id="FrameworkDev">FrameworkDev</value>
+            <value id="LanguagePrograming">LanguagePrograming</value>
           </values>
           <sql>type</sql>
           <default_value/>
@@ -8699,63 +8742,47 @@
                 <title>Menu:ConfigManagement:AllDevices</title>
                 <icon>itop-config-mgmt/images/server.png</icon>
                 <subtitle>Menu_ConfigManagement_AllDevices</subtitle>
-              </dashlet>
-              <dashlet id="2" xsi:type="DashletBadge">
-                <rank>3</rank>
-                <class>Server</class>
-              </dashlet>
-              <dashlet id="3" xsi:type="DashletBadge">
-                <rank>4</rank>
-                <class>NetworkDevice</class>
-              </dashlet>
+              </dashlet>              
             </dashlets>
           </cell>
           <cell id="3">
             <rank>3</rank>
             <dashlets>
-              <dashlet id="4" xsi:type="DashletHeaderStatic">
-                <rank>0</rank>
+              <dashlet id="27" xsi:type="DashletHeaderStatic">
+                <rank>27</rank>
                 <title>Menu:ConfigManagement:SWAndApps</title>
                 <icon>itop-config-mgmt/images/application.png</icon>
               </dashlet>
-              <dashlet id="5" xsi:type="DashletBadge">
-                <rank>1</rank>
+              <dashlet id="28" xsi:type="DashletBadge">
+                <rank>28</rank>
                 <class>Middleware</class>
-              </dashlet>
-              <dashlet id="6" xsi:type="DashletBadge">
-                <rank>2</rank>
-                <class>DBServer</class>
-              </dashlet>
-              <dashlet id="7" xsi:type="DashletBadge">
-                <rank>3</rank>
+              </dashlet>              
+              <dashlet id="29" xsi:type="DashletBadge">
+                <rank>29</rank>
                 <class>WebServer</class>
               </dashlet>
-              <dashlet id="8" xsi:type="DashletBadge">
-                <rank>4</rank>
+              <dashlet id="30" xsi:type="DashletBadge">
+                <rank>30</rank>
                 <class>PCSoftware</class>
               </dashlet>
-              <dashlet id="9" xsi:type="DashletBadge">
-                <rank>5</rank>
+              <dashlet id="31" xsi:type="DashletBadge">
+                <rank>31</rank>
                 <class>OtherSoftware</class>
               </dashlet>
-              <dashlet id="10" xsi:type="DashletBadge">
-                <rank>6</rank>
+              <dashlet id="32" xsi:type="DashletBadge">
+                <rank>32</rank>
                 <class>MiddlewareInstance</class>
               </dashlet>
-              <dashlet id="11" xsi:type="DashletBadge">
-                <rank>7</rank>
-                <class>DatabaseSchema</class>
-              </dashlet>
-              <dashlet id="12" xsi:type="DashletBadge">
-                <rank>8</rank>
+              <dashlet id="33" xsi:type="DashletBadge">
+                <rank>33</rank>
                 <class>WebApplication</class>
               </dashlet>
-              <dashlet id="13" xsi:type="DashletBadge">
-                <rank>9</rank>
+              <dashlet id="34" xsi:type="DashletBadge">
+                <rank>34</rank>
                 <class>Patch</class>
               </dashlet>
-              <dashlet id="14" xsi:type="DashletBadge">
-                <rank>10</rank>
+              <dashlet id="35" xsi:type="DashletBadge">
+                <rank>35</rank>
                 <class>Licence</class>
               </dashlet>
             </dashlets>
@@ -8763,35 +8790,103 @@
           <cell id="4">
             <rank>4</rank>
             <dashlets>
-              <dashlet id="15" xsi:type="DashletHeaderStatic">
-                <rank>0</rank>
+              <dashlet id="36" xsi:type="DashletHeaderStatic">
+                <rank>36</rank>
                 <title>Menu:ConfigManagement:Misc</title>
                 <icon>itop-config-mgmt/images/subnet.png</icon>
               </dashlet>
-              <dashlet id="16" xsi:type="DashletBadge">
-                <rank>1</rank>
+              <dashlet id="37" xsi:type="DashletBadge">
+                <rank>37</rank>
                 <class>NetworkInterface</class>
+              </dashlet>              
+              <dashlet id="38" xsi:type="DashletBadge">
+                <rank>38</rank>
+                <class>BusinessProcess</class>
               </dashlet>
-              <dashlet id="17" xsi:type="DashletBadge">
-                <rank>2</rank>
+              <dashlet id="39" xsi:type="DashletBadge">
+                <rank>39</rank>
+                <class>ApplicationSolution</class>
+              </dashlet>
+              <dashlet id="40" xsi:type="DashletBadge">
+                <rank>40</rank>
+                <class>Group</class>
+              </dashlet>
+            </dashlets>
+          </cell>
+          <cell id="5">
+            <rank>5</rank>
+            <dashlets>
+              <dashlet id="41" xsi:type="DashletHeaderStatic">
+                <rank>41</rank>
+                <title>Menu:ConfigManagement:Database</title>
+                <icon>itop-config-mgmt/images/database.png</icon>
+              </dashlet>
+              <dashlet id="42" xsi:type="DashletBadge">
+                <rank>42</rank>
+                <class>DBServer</class>
+              </dashlet>
+              <dashlet id="43" xsi:type="DashletBadge">
+                <rank>43</rank>
+                <class>MariaDB</class>
+              </dashlet>              
+              <dashlet id="44" xsi:type="DashletBadge">
+                <rank>44</rank>
+                <class>MySQLDB</class>
+              </dashlet>
+              <dashlet id="45" xsi:type="DashletBadge">
+                <rank>45</rank>
+                <class>OraDB</class>
+              </dashlet>
+              <dashlet id="46" xsi:type="DashletBadge">
+                <rank>46</rank>
+                <class>PGDB</class>
+              </dashlet>
+              <dashlet id="47" xsi:type="DashletBadge">
+                <rank>47</rank>
+                <class>SQLSDB</class>
+              </dashlet>
+              <dashlet id="48" xsi:type="DashletBadge">
+                <rank>48</rank>
+                <class>DatabaseSchema</class>
+              </dashlet>              
+            </dashlets>
+          </cell>
+          <cell id="6">
+            <rank>6</rank>
+            <dashlets>
+              <dashlet id="49" xsi:type="DashletHeaderStatic">
+                <rank>49</rank>
+                <title>Menu:ConfigManagement:NetworkLan</title>
+                <icon>itop-config-mgmt/images/switch.png</icon>
+              </dashlet>
+              <dashlet id="50" xsi:type="DashletBadge">
+                <rank>50</rank>
+                <class>NetworkDevice</class>
+              </dashlet>
+              <dashlet id="51" xsi:type="DashletBadge">
+                <rank>49</rank>
+                <class>AccessPoint</class>
+              </dashlet>              
+              <dashlet id="52" xsi:type="DashletBadge">
+                <rank>52</rank>
+                <class>Router</class>
+              </dashlet>
+              <dashlet id="53" xsi:type="DashletBadge">
+                <rank>53</rank>
+                <class>Switche</class>
+              </dashlet>
+              <dashlet id="54" xsi:type="DashletBadge">
+                <rank>54</rank>
+                <class>WLANController</class>
+              </dashlet>
+              <dashlet id="55" xsi:type="DashletBadge">
+                <rank>55</rank>
                 <class>Subnet</class>
               </dashlet>
               <dashlet id="vlan" xsi:type="DashletBadge">
-                <rank>2.1</rank>
+                <rank>56</rank>
                 <class>VLAN</class>
-              </dashlet>
-              <dashlet id="18" xsi:type="DashletBadge">
-                <rank>4</rank>
-                <class>BusinessProcess</class>
-              </dashlet>
-              <dashlet id="19" xsi:type="DashletBadge">
-                <rank>5</rank>
-                <class>ApplicationSolution</class>
-              </dashlet>
-              <dashlet id="20" xsi:type="DashletBadge">
-                <rank>6</rank>
-                <class>Group</class>
-              </dashlet>
+              </dashlet>              
             </dashlets>
           </cell>
         </cells>

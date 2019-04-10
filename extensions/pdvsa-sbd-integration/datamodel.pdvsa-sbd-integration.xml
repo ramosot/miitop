@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="1.5">
+	<constants>
+	</constants>
+	<classes>
+	</classes>
+	<menus>
+	</menus>
+	<user_rights>
+		<groups>
+		</groups>
+		<profiles>
+		</profiles>
+	</user_rights>
+	<module_parameters>
+    	<parameters id="pdvsa-sbd-integration" _delta="define">
+	    		<sbd_url>http://oriplc200.ori.pdvsa.com/sbd/inventario_editar.php?ba=$this->name$</sbd_url>
+	    		<target_classes type="array">
+	    			<target_class>DBServer</target_class>
+    		</target_classes>
+    	</parameters>
+    </module_parameters>
+</itop_design>
