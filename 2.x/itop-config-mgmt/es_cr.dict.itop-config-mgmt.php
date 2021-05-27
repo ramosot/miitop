@@ -693,6 +693,12 @@ Dict::Add('ES CR', 'Spanish', 'Español, Castellano', array(
 	'Class:NetworkDevice/Attribute:iosversion_name+' => 'Sistema Operativo',
 	'Class:NetworkDevice/Attribute:ram' => 'RAM',
 	'Class:NetworkDevice/Attribute:ram+' => 'RAM',
+	'Class:NetworkDevice/Attribute:respaldado' => 'Posee respaldo eléctrico',
+	'Class:NetworkDevice/Attribute:respaldado+' => 'Posee respaldo eléctrico',
+	'Class:NetworkDevice/Attribute:respaldado/Value:not' => 'No',
+	'Class:NetworkDevice/Attribute:respaldado/Value:not+' => 'No',
+	'Class:NetworkDevice/Attribute:respaldado/Value:yes' => 'Si',
+	'Class:NetworkDevice/Attribute:respaldado/Value:yes+' => 'Si',
 ));
 
 //
